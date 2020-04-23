@@ -19,8 +19,10 @@
                     <td><% contato.nome %></td>
                     <td><% contato.email %></td>
                     <td>
-                        <a href="/contato<%- index %>"Detalhes></a>
-                        <a href="/chat/<%- contato.email %>">Conversar></a>                        
+                        <a href="/contato<%- index %>">Detalhes></a>
+                        <a href="/chat/<%- contato.email %>" 
+                           id="chat_<%- contato.email%>">Conversar
+                        </a>                        
                     </td>
                 </tr>
 
@@ -30,5 +32,6 @@
     </table>
     <p>Bem vindo <%- usuario.nome %> </p>
 </section>
+<% include notify_script %>
 <% include ../exit %>
 <% include ../footer %>

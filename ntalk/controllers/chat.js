@@ -2,8 +2,7 @@ class ChatController {
 
     index (req, res) {
         let result = {
-            email: req.params.email, 
-            usuario: req.session.usuario
+            email: req.params.email,             
         }; 
         res.render('chat/index', result); 
     }

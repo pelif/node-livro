@@ -5,11 +5,11 @@ class ContatoController {
      * @param {*} req 
      * @param {*} res 
      */
-    index (req, res) {
+    index (req, res) {        
         let usuario = {
             usuario: req.session.usuario, 
             contatos: req.session.usuario.contatos
-        };                        
+        };                                   
         res.render('contatos/index', usuario); 
     }
 
@@ -20,7 +20,7 @@ class ContatoController {
      */
     create (req, res) {
         let contato = req.body.contato, 
-            usuario = req.session.usuario; 
+            usuario = req.session.usuario;             
         usuario.contatos.push(contato); 
         res.redirect('/contatos'); 
     }
